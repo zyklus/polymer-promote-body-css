@@ -1,0 +1,3 @@
+Although it is generally discouraged, in some circumstances you just need to pull parts of a web component out of its own shadow DOM and promote it to existing in the `body` of your page.  Popups, drop-downs, draggables, etc come to mind.  In these cases, styling your elements becomes a pain since none of the selectors hidden away in your shadow DOM will apply.
+
+This element simply takes any rules, that begin with `body ` from whatever element it is placed in and promote them to a new stylsheet at the document level.  Obviously this means these rules will now apply to all elements on the page, so plan accordingly with highly specific class names, etc.
