@@ -20,7 +20,7 @@
 
 		if( promoteRules.length ){
 			var stylesheet = document.createElement( 'style' );
-			stylesheet.innerHTML = promoteRules.join( '' ) + '/* Inserted from polymer element ' + nodeName + ' */';
+			stylesheet.innerHTML = '/* Inserted from polymer element ' + nodeName + ' */\n' + promoteRules.join( '' );
 
 			document.getElementsByTagName( 'head' )[0].appendChild( stylesheet );
 		}
